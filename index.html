@@ -6,23 +6,130 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title>Le Wagon - Middleman</title>
-    <link href="stylesheets/application-e2bb498c.css" rel="stylesheet" />
-    <script src="javascripts/application-93de88c9.js"></script>
-    <link href="images/favicon-f15af148.png" rel="icon" type="image/png" />
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="stylesheets/application-f5d5e7c3.css" rel="stylesheet" />
+    <script src="javascripts/application-b0b0b0f8.js"></script>
+    <link href="images/images/favicon.png" rel="icon" type="image/png" />
   </head>
   <body>
-    <div id="home">
-  <div class="home-content">
-    <img src="images/logo-acc9c0ec.png" width="200" alt="Logo" />
-    <p>
-      Middleman is now running!
-    </p>
-    <p class="about">
-      <a href="about.html">More about this template</a>
-    </p>
+    <div class="container-fluid p-0 position-relative">
+  <div class="banner height-all-screen-navbar text-white" >
+    <div id="toggle" class="button_container d-block d-sm-none">
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </div>
+    <div id="overlay" class="overlay" aria-hidden="true">
+      <nav class="overlay-menu">
+        <ul>
+          <li>
+            <a href="">Qui suis-je ?</a>
+          </li>
+          <li>
+            <a href="">Compétences</a>
+          </li>
+          <li>
+            <a href="">Portfolio</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="banner-info" class="height-all-screen position-relative d-flex align-items-center justify-content-center display-banner-info">
+      <h1 class="font-weight-bold text-center"><span id="typed"></span></h1>
+    </div>
+    <div class="scroll w-100 d-flex justify-content-center align-items-center">
+      <div class="scroll-icon position-relative">
+        <div class="scroll-icon-dot bg-white"></div>
+      </div>
+    </div>
+    <div class="navbar bg-transparent d-flex justify-content-center">
+      <ul class ="list-inline width-navbar d-flex justify-content-center align-items-center m-0">
+        <li class="d-none d-sm-block list-inline-item text-center">
+          <a class="text-white text-uppercase pb-2 pt-2" href="">Qui suis-je ?</a>
+        </li>
+        <li class="d-none d-sm-block list-inline-item text-center">
+          <a class="text-white text-uppercase pb-2 pt-2" href="">Compétences</a>
+        </li>
+        <li class="d-none d-sm-block list-inline-item text-center">
+          <a class="pb-2 pt-2" href=""><img class="logo-img" src="images/logo-grey.png" alt="logo clc"> </a>
+        </li>
+        <li class="d-none d-sm-block list-inline-item text-center">
+          <a class="text-white text-uppercase pb-2 pt-2" href="">Portfolio</a>
+        </li>
+        <li class="d-none d-sm-block list-inline-item text-center">
+          <a class="text-white text-uppercase pb-2 pt-2" href="">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p>
+    </div>
   </div>
 </div>
 
+<script>
+  window.addEventListener("load", () => {
+    const typed = document.getElementById("typed");
+    if (typed) {
+      new Typed("#typed", {
+        strings: [
+        "Bonjour! Je m'appelle Carine. <br>Je suis développeuse web full stack.<br><br>Faisons connaisance..."
+        ],
+        typeSpeed: 50
+      });
+    }
+    if ($(".typed-cursor--blink").length) {
+      console.log(ello);
+    }
+  });
+
+  window.addEventListener("scroll", () => {
+    const bannerInfo = document.getElementById("banner-info");
+    const navbar = document.querySelector(".navbar");
+    const logoImg = document.querySelector(".logo-img");
+    if (bannerInfo) {
+      if (scrollY > 160) {
+        bannerInfo.classList.remove("display-banner-info");
+        bannerInfo.classList.add("hide-banner-info");
+      } else {
+        bannerInfo.classList.remove("hide-banner-info");
+        bannerInfo.classList.add("display");
+      }
+    }
+    if (navbar) {
+      if (window.scrollY >= window.innerHeight) {
+        navbar.classList.remove("bg-transparent");
+        navbar.classList.add("navbar-fixed");
+        logoImg.src = "images/logo-yellow.png";
+      } else {
+        navbar.classList.remove("navbar-fixed");
+        navbar.classList.add("bg-transparent");
+        logoImg.src = "images/logo-grey.png";
+      }
+    }
+  });
+
+  const hamb = document.getElementById("toggle");
+  const overlay = document.getElementById("overlay");
+  const body = document.body;
+  hamb.addEventListener("click", () => {
+   hamb.classList.toggle('active');
+   overlay.classList.toggle('open');
+   body.classList.toggle('noscroll');
+ });
+</script>
+
+    <script src="javascripts/typed-f01cefa5.js" type="text/javascript"></script>
   </body>
 </html>
