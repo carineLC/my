@@ -8,6 +8,6 @@ gem 'pry-byebug', require: true
 
 # Assets
 gem 'font-awesome-sass'
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'jquery-middleman'
 
