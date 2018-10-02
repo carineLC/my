@@ -3,7 +3,7 @@
  <%= partial "shared/navbar" %>
 </div>
 
-
+<div class="overflow">
 <section id="about-me">
   <div class="container d-flex align-items-center justify-content-center flex-column">
     <h1 data-aos="fade-right" data-aos-once="true">Qui suis-je?</h1>
@@ -58,6 +58,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <%= partial "shared/footer" %>
 
@@ -90,7 +91,7 @@
 
     //Post request with fetch
     form.addEventListener('submit', (e) => {
-      e.preventDefault();
+      // e.preventDefault();
 
       const formData = new FormData(form);
       formData.append('_subject', 'Message from CLC website');
@@ -116,7 +117,7 @@
     });
 
 // BANNER TYPED.JS
-window.addEventListener("load", () => {
+
   const typed = document.getElementById("typed");
   if (typed) {
     new Typed("#typed", {
@@ -126,7 +127,7 @@ window.addEventListener("load", () => {
       typeSpeed: 50
     });
   }
-});
+
 
 const bannerInfo = document.getElementById("banner-info");
 const navbar = document.getElementById("navbar");
