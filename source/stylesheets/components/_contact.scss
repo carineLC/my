@@ -1,0 +1,68 @@
+.contactForm {
+  input,
+  textarea {
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+  }
+  input::placeholder,
+  textarea::placeholder {
+   color: $light-gray;
+  }
+}
+
+.form-group {
+  input:focus,
+  textarea:focus {
+    box-shadow: inset 0px 0px 8px 2px rgba(247, 236, 50, 0.8);
+    outline: 0;
+    color: $gray;
+  }
+  textarea {
+    height: 126px;
+  }
+}
+
+#submit {
+  color: white;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    background: $green;
+    border-color: $green;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+#success {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.25s;
+  &.expand {
+    height: 36px;
+  }
+  div {
+    background: rgba(30, 168, 150, 0.5);
+    color: white;
+    font-size: 0.8em;
+    padding: 8px 0;
+    border: 1px solid rgba(30, 168, 150, 0.5);
+    text-align: center;
+  }
+}
+
+#close {
+  position: absolute;
+  font-size: 1.5em;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
