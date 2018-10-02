@@ -9,127 +9,267 @@
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-    <link href="stylesheets/application-f5d5e7c3.css" rel="stylesheet" />
-    <script src="javascripts/application-b0b0b0f8.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
+    <link href="stylesheets/application-607f6d54.css" rel="stylesheet" />
+    <script src="javascripts/application-2eb7662f.js"></script>
     <link href="images/images/favicon.png" rel="icon" type="image/png" />
   </head>
   <body>
-    <div class="container-fluid p-0 position-relative">
-  <div class="banner height-all-screen-navbar text-white" >
-    <div id="toggle" class="button_container d-block d-sm-none">
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
+    <div id="home" class="banner height-all-screen-navbar text-white" >
+ <div id="banner-info" class="height-all-screen position-relative d-flex align-items-center justify-content-center display-banner-info">
+  <h1 class="font-weight-bold text-center"><span id="typed"></span></h1>
+  <div class="d-none d-sm-block scroll">
+    <div class="scroll-icon position-relative">
+      <div class="scroll-icon-dot"></div>
     </div>
-    <div id="overlay" class="overlay" aria-hidden="true">
-      <nav class="overlay-menu">
-        <ul>
-          <li>
-            <a href="">Qui suis-je ?</a>
-          </li>
-          <li>
-            <a href="">Compétences</a>
-          </li>
-          <li>
-            <a href="">Portfolio</a>
-          </li>
-          <li>
-            <a href="">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div id="banner-info" class="height-all-screen position-relative d-flex align-items-center justify-content-center display-banner-info">
-      <h1 class="font-weight-bold text-center"><span id="typed"></span></h1>
-    </div>
-    <div class="scroll w-100 d-flex justify-content-center align-items-center">
-      <div class="scroll-icon position-relative">
-        <div class="scroll-icon-dot bg-white"></div>
+  </div>
+</div>
+
+ <!--  HAMBURGER MENU -->
+<div id="toggle" class="button-container d-block d-sm-none">
+  <span class="top"></span>
+  <span class="middle"></span>
+  <span class="bottom"></span>
+</div>
+<div id="overlay" class="overlay" aria-hidden="true">
+  <nav class="overlay-menu">
+    <ul>
+      <li>
+        <a href="">Qui suis-je ?</a>
+      </li>
+      <li>
+        <a href="">Compétences</a>
+      </li>
+      <li>
+        <a href="">Portfolio</a>
+      </li>
+      <li>
+        <a href="">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div id="navbar" class="navbar bg-transparent d-flex justify-content-center">
+  <!--   LOGO NAVBAR PHONE -->
+  <a id="logo-navbar-phone" class="d-block d-sm-none invisible" href="">
+    <img src="images/logo-yellow-938fd9a8.png" alt="logo clc">
+  </a>
+  <!-- NAVBAR -->
+  <ul class="w-100 m-0 list-inline d-flex justify-content-center align-items-center text-center">
+    <li class="d-none d-sm-block"><a class="title" href="">Qui suis-je ?</a></li>
+    <li class="d-none d-sm-block"><a class="title" href="">Compétences</a></li>
+    <li class="d-none d-sm-block"><a href="">
+      <img id="logo" src="images/logo-grey-197bb6f4.png" alt="logo clc">
+    </a></li>
+    <li class="d-none d-sm-block"><a class="title" href="">Portfolio</a></li>
+    <li class="d-none d-sm-block"><a class="title" href="">Contact</a></li>
+  </ul>
+</div>
+
+</div>
+
+
+<section id="about-me">
+  <div class="container d-flex align-items-center justify-content-center flex-column">
+    <h1 data-aos="fade-right" data-aos-once="true">Qui suis-je?</h1>
+    <div class="header-bar" data-aos="fade-right" data-aos-delay="50" data-aos-once="true"></div>
+    <div class="row">
+      <div class="col">
       </div>
     </div>
-    <div class="navbar bg-transparent d-flex justify-content-center">
-      <ul class ="list-inline width-navbar d-flex justify-content-center align-items-center m-0">
-        <li class="d-none d-sm-block list-inline-item text-center">
-          <a class="text-white text-uppercase pb-2 pt-2" href="">Qui suis-je ?</a>
-        </li>
-        <li class="d-none d-sm-block list-inline-item text-center">
-          <a class="text-white text-uppercase pb-2 pt-2" href="">Compétences</a>
-        </li>
-        <li class="d-none d-sm-block list-inline-item text-center">
-          <a class="pb-2 pt-2" href=""><img class="logo-img" src="images/logo-grey-c4a63097.png" alt="logo clc"> </a>
-        </li>
-        <li class="d-none d-sm-block list-inline-item text-center">
-          <a class="text-white text-uppercase pb-2 pt-2" href="">Portfolio</a>
-        </li>
-        <li class="d-none d-sm-block list-inline-item text-center">
-          <a class="text-white text-uppercase pb-2 pt-2" href="">Contact</a>
-        </li>
-      </ul>
+  </div>
+</section>
+<section id="skills">
+  <div class="container d-flex align-items-center justify-content-center flex-column">
+    <h1 data-aos="fade-left" data-aos-once="true">Compétences</h1>
+    <div class="header-bar" data-aos="fade-left" data-aos-delay="50" data-aos-once="true"></div>
+    <div class="row">
+      <div class="col">
+      </div>
     </div>
   </div>
-</div>
-</div>
+</section>
+<section id="portfolio">
+  <div class="container d-flex align-items-center justify-content-center flex-column">
+    <h1 data-aos="fade-right" data-aos-once="true">Portfolio</h1>
+    <div class="header-bar" data-aos="fade-right" data-aos-delay="50" data-aos-once="true"></div>
+    <div class="row">
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p><p>Hello</p>
+<section id="contact">
+  <<div class="container d-flex align-items-center justify-content-center flex-column">
+    <h1 data-aos="fade-left" data-aos-once="true">Contact</h1>
+    <div class="header-bar" data-aos="fade-left" data-aos-delay="50" data-aos-once="true"></div>
+    <div class="row mt-4">
+      <div class="col">
+        <form id="contactForm" name="contactForm" class="contactForm">
+          <div class="form-group">
+            <input type="text"  name="name" placeholder="Nom*" required>
+            <input type="email" name="email" placeholder="Email*" required>
+            <textarea type="text" name="message" placeholder="Message*" required></textarea>
+          </div>
+          <div id="success">
+            <div>Votre message a été envoyé avec succès. Merci !
+              <span id="close" class="mdi"><i class="fas fa-times"></i></span>
+            </div>
+          </div>
+          <input type="submit" value="Envoyer" id="submit">
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<div class="footer">
+    <a href="#home"><i class="fas fa-angle-double-up up"></i></a>
+    <div class="social-icons d-flex align-items-center justify-content-center">
+      <a href="https://www.linkedin.com/in/carine-le-charles/" class="d-flex align-items-center justify-content-center">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="http://www.viadeo.com/p/002174xj5a7aqllj" class="d-flex align-items-center justify-content-center">
+        <i class="fab fa-viadeo"></i>
+      </a>
+      <a href="https://github.com/carineLC" class="d-flex align-items-center justify-content-center">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="text-center copyright">CARINE LE CHARLÈS<span class="highlight">&copy;2018</span></div>
+  </div>
+
 
 <script>
-  window.addEventListener("load", () => {
-    const typed = document.getElementById("typed");
-    if (typed) {
-      new Typed("#typed", {
-        strings: [
-        "Bonjour! Je m'appelle Carine. <br>Je suis développeuse web full stack.<br><br>Faisons connaisance..."
-        ],
-        typeSpeed: 50
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+  });
+ // SEND EMAIL FROM CONTACT FORM
+ const form = document.getElementById('contactForm');
+ const formspreeEmail = 'carine.le.charles@gmail.com';
+ const success = document.getElementById('success');
+ const close = document.getElementById('close');
+    // Convert form data to json
+    const formDataToJson = formData => {
+      const entries = formData.entries();
+      const dataObj = Array.from(entries).reduce( (data, [key, value]) => {
+        data[key] = value;
+        if (key === "email") {
+          data._replyTo = value;
+        }
+        return data;
+      }, {});
+      return JSON.stringify(dataObj);
+    };
+
+    //Post request with fetch
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      formData.append('_subject', 'Message from CLC website');
+
+      fetch(`https://formspree.io/${ formspreeEmail }`, {
+        method: 'POST',
+        body: formDataToJson(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success === 'email sent') {
+          success.classList.add("expand");
+          form.reset();
+        };
       });
-    }
-    if ($(".typed-cursor--blink").length) {
-      console.log(ello);
-    }
-  });
+    });
 
-  window.addEventListener("scroll", () => {
-    const bannerInfo = document.getElementById("banner-info");
-    const navbar = document.querySelector(".navbar");
-    const logoImg = document.querySelector(".logo-img");
-    if (bannerInfo) {
-      if (scrollY > 160) {
-        bannerInfo.classList.remove("display-banner-info");
-        bannerInfo.classList.add("hide-banner-info");
-      } else {
-        bannerInfo.classList.remove("hide-banner-info");
-        bannerInfo.classList.add("display");
-      }
-    }
-    if (navbar) {
-      if (window.scrollY >= window.innerHeight) {
-        navbar.classList.remove("bg-transparent");
-        navbar.classList.add("navbar-fixed");
-        logoImg.src = "images/logo-yellow-938fd9a8.png";
-      } else {
-        navbar.classList.remove("navbar-fixed");
-        navbar.classList.add("bg-transparent");
-        logoImg.src = "images/logo-grey-c4a63097.png";
-      }
-    }
-  });
+    close.addEventListener('click', () => {
+      success.classList.remove("expand");
+    });
 
-  const hamb = document.getElementById("toggle");
-  const overlay = document.getElementById("overlay");
-  const body = document.body;
-  hamb.addEventListener("click", () => {
-   hamb.classList.toggle('active');
-   overlay.classList.toggle('open');
-   body.classList.toggle('noscroll');
- });
+// BANNER TYPED.JS
+window.addEventListener("load", () => {
+  const typed = document.getElementById("typed");
+  if (typed) {
+    new Typed("#typed", {
+      strings: [
+      "Bonjour! Je m'appelle Carine. <br>Je suis développeuse web full stack.<br><br>Faisons connaisance..."
+      ],
+      typeSpeed: 50
+    });
+  }
+});
+
+const bannerInfo = document.getElementById("banner-info");
+const navbar = document.getElementById("navbar");
+const logoNavbar = document.getElementById("logo");
+const logoNavbarPhone = document.getElementById("logo-navbar-phone");
+const hamb = document.getElementById("toggle");
+const overlay = document.getElementById("overlay");
+const body = document.body;
+// BANNER INFO DISAPPEARS ON SCROLL
+window.addEventListener("scroll", () => {
+  if (bannerInfo) {
+    if (scrollY > 160) {
+      bannerInfo.classList.remove("display-banner-info");
+      bannerInfo.classList.add("hide-banner-info");
+    } else {
+      bannerInfo.classList.remove("hide-banner-info");
+      bannerInfo.classList.add("display");
+    }
+  }
+});
+
+// NAVBAR STYLE CHANGE ON SCROLL
+window.addEventListener("scroll", () => {
+  if (navbar) {
+    if (window.scrollY >= window.innerHeight) {
+      navbar.classList.remove("bg-transparent");
+      navbar.classList.add("navbar-fixed");
+      logoNavbar.src = "images/logo-yellow-938fd9a8.png";
+    } else {
+      navbar.classList.remove("navbar-fixed");
+      navbar.classList.add("bg-transparent");
+      logoNavbar.src = "images/logo-grey-197bb6f4.png";
+    }
+  }
+});
+
+// DISPLAY LOGO NAVBAR IN PHONE SCREEN
+window.addEventListener("scroll", () => {
+  if (navbar) {
+    if (window.scrollY >= window.innerHeight) {
+      logoNavbarPhone.classList.remove("invisible");
+      logoNavbarPhone.classList.add("visible");
+    } else {
+      logoNavbarPhone.classList.remove("visible");
+      logoNavbarPhone.classList.add("invisible");
+    }
+  }
+});
+
+// OPEN MENU HAMBURGER
+hamb.addEventListener("click", () => {
+ hamb.classList.toggle('active');
+ overlay.classList.toggle('open');
+ body.classList.toggle('noscroll');
+});
 </script>
 
     <script src="javascripts/typed-f01cefa5.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
