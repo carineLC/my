@@ -24,21 +24,24 @@
   }
   .social-icons {
     a {
-      transition: background 0.3s, text-shadow 0.3s, transform 0.3s;
-      cursor: pointer;
-      color: white;
-      width: 55px;
-      height: 55px;
-      text-align: center;
-      margin: 0 15px;
-      background: $light-blue;
-      font-size: 1.7em;
-    }
-    a:hover {
-      text-decoration: none;
-      background: $green;
-      text-shadow: 1px 1px 2px rgba(73, 73, 73, 0.5);
-      transform: scale(0.9);
+      &,
+      &:focus {
+        transition: background 0.3s, text-shadow 0.3s, transform 0.3s;
+        cursor: pointer;
+        color: white;
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        margin: 0 15px;
+        background: $light-blue;
+        font-size: 1.7em;
+      }
+      &:hover {
+        text-decoration: none;
+        background: $green;
+        text-shadow: 1px 1px 2px rgba(73, 73, 73, 0.5);
+        transform: scale(0.9);
+      }
     }
   }
 
