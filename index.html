@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 
-    <link href="stylesheets/application-a33d85e4.css" rel="stylesheet" />
+    <link href="stylesheets/application-378bf0d3.css" rel="stylesheet" />
     <script src="javascripts/application-2eb7662f.js"></script>
     <link href="images/images/favicon.png" rel="icon" type="image/png" />
   </head>
@@ -70,7 +70,7 @@
 
 </div>
 
-
+<div class="overflow">
 <section id="about-me">
   <div class="container d-flex align-items-center justify-content-center flex-column">
     <h1 data-aos="fade-right" data-aos-once="true">Qui suis-je?</h1>
@@ -125,6 +125,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <div class="footer">
     <a href="#home"><i class="fas fa-angle-double-up up"></i></a>
@@ -172,7 +173,7 @@
 
     //Post request with fetch
     form.addEventListener('submit', (e) => {
-      e.preventDefault();
+      // e.preventDefault();
 
       const formData = new FormData(form);
       formData.append('_subject', 'Message from CLC website');
@@ -198,7 +199,7 @@
     });
 
 // BANNER TYPED.JS
-window.addEventListener("load", () => {
+
   const typed = document.getElementById("typed");
   if (typed) {
     new Typed("#typed", {
@@ -208,7 +209,7 @@ window.addEventListener("load", () => {
       typeSpeed: 50
     });
   }
-});
+
 
 const bannerInfo = document.getElementById("banner-info");
 const navbar = document.getElementById("navbar");
