@@ -3,32 +3,39 @@
   .height-all-screen-navbar {
     height: calc(100vh);
   }
+  .banner {
+    h1 {
+      font-size: 3em;
+    }
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767px) {
-  .height-all-screen-navbar {
-    height: calc(100vh + 3.5em);
-  }
+
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991px) {
-  .height-all-screen-navbar {
-    height: calc(100vh + 3.5em);
-  }
+
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199px) {
-  .height-all-screen-navbar {
-    height: calc(100vh + 3.5em);
-  }
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .height-all-screen-navbar {
-    height: calc(100vh + 3.5em);
+
+}
+
+@media (hover: hover) {
+  .social-icons {
+    a:hover {
+      background: $green !important;
+      text-shadow: 1px 1px 2px rgba(73, 73, 73, 0.5);
+      transform: scale(0.9);
+    }
   }
 }
