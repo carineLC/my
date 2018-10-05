@@ -1,0 +1,66 @@
+.card-logo {
+  a {
+    transition: transform 0.3s;
+    &:hover {
+      text-decoration : none;
+    }
+  }
+  h4 {
+    font-weight: bold;
+  }
+  .size-logo {
+    font-size: 3.5em;
+    padding-bottom: 5px;
+  }
+  img {
+    height: 3.5em;
+    padding-bottom: 5px;
+  }
+}
+
+.ruby {
+  a {
+   color: #CC342D;
+ }
+}
+
+.rails {
+  a {
+    color: #BC261A;
+  }
+}
+
+.postgresql {
+  a {
+    color: #336791;
+  }
+}
+
+.html {
+  a {
+    color: #e44d26;
+  }
+}
+
+.css {
+  a {
+    color: #1b73ba;
+  }
+}
+
+.javascript {
+  a {
+    color: #efc725;
+  }
+}
+
+.heroku {
+  a {
+    color: #AB8ECD;
+  }
+}
+
+.border-right {
+  border-right: 2px solid $gray;
+  height: 40px;
+}

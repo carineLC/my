@@ -1,20 +1,66 @@
-<div id="about">
-  <div class="about-content">
-    <h1>This template was built with <i class="fas fa-heart"></i> by</h1>
-    <ul class="list-inline">
-      <% data.users.each do |user| %>
-        <li>
-          <% link_to "https://kitt.lewagon.com/alumni/#{user.github_nickname}", target: "_blank" do %>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.github_nickname}", class: "img-circle" %>
-          <% end %>
-          <h2><%= user.name %></h2>
-          <p>
-            <% link_to "https://github.com/#{user.github_nickname}", target: "_blank" do %>
-              <i class="fab fa-github"></i> <%= user.github_nickname %>
-            <% end %>
-          </p>
-        </li>
-      <% end %>
-    </ul>
+ <div id="about" class="timeline-container">
+  <div id="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-icon" data-aos="zoom-in" data-aos-once="true" data-aos-duration="800">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      </div>
+      <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="500">
+        <h3>Conception</h3>
+        <div class="card-logo figma">
+          <a href="https://www.heroku.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+            <img src="images/figma.svg" alt="">
+            <h4>Figma</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon" data-aos="zoom-in" data-aos-once="true" data-aos-duration="800">
+        <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+      </div>
+      <div class="timeline-content right" data-aos="fade-left" data-aos-once="true" data-aos-duration="500">
+        <h3>Développement</h3>
+        <div class="row">
+        <div class="col card-logo ruby">
+          <a href="https://www.ruby-lang.org/en/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+            <i class="devicon-ruby-plain size-logo"></i>
+            <h4>Ruby</h4>
+          </a>
+        </div>
+        <div class="col card-logo rails">
+          <a href="https://rubyonrails.org/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+            <i class="devicon-rails-plain size-logo"></i>
+            <h4>Rails</h4>
+          </a>
+        </div>
+        <div class="col card-logo postgresql">
+          <a href="https://www.postgresql.org/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+            <i class="devicon-postgresql-plain size-logo"></i>
+            <h4>PostgreSQL</h4>
+          </a>
+        </div>
+        <div class="col card-logo html">
+          <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+            <i class="devicon-html5-plain size-logo"></i>
+            <h4>HTML</h4>
+          </a>
+        </div>
+        <div class="col card-logo css">
+          <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+            <i class="devicon-css3-plain size-logo"></i>
+            <h4>CSS</h4>
+          </a>
+        </div>
+        <div class="col card-logo javascript">
+          <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+            <i class="devicon-javascript-plain size-logo"></i>
+            <h4>JavaScript</h4>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+

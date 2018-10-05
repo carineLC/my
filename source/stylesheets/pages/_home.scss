@@ -3,15 +3,15 @@
 }
 
 #about-me {
-  background-color: #3d00b2;
-}
-
-#skills {
-  background-color: green;
+  background-color: white;
 }
 
 #portfolio {
-  background-color: pink;
+  background-color: white;
+}
+
+#skills {
+  background-color: #f5f5f5;
 }
 
 #contact {
@@ -24,15 +24,14 @@ section {
     text-align: center;
     padding: 15px 0 15px 0;
     width: 100%;
-    color: white;
-    font-weight: bold;
+    color: $gray;
     margin: 0;
   }
 }
 
 .header-bar {
   width: 10%;
-  height: .25em;
-  background: white;
+  height: .2em;
+  background: $gray;
 }
 
