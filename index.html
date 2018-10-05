@@ -7,16 +7,17 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title></title>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-    <link href="stylesheets/application-25e0fcdd.css" rel="stylesheet" />
+    <link href="stylesheets/application-4f05ac67.css" rel="stylesheet" />
     <script src="javascripts/application-2eb7662f.js"></script>
     <link href="images/images/favicon.png" rel="icon" type="image/png" />
   </head>
   <body>
-    <div id="home" class="banner height-all-screen-navbar text-white" >
+    <div class="banner height-all-screen-navbar text-white" >
  <div id="banner-info" class="height-all-screen position-relative d-flex align-items-center justify-content-center display-banner-info">
   <h1 class="font-weight-bold text-center"><span id="typed"></span></h1>
   <div class="d-none d-sm-block scroll">
@@ -36,7 +37,7 @@
   <nav class="overlay-menu">
     <ul>
       <li>
-        <a href="">Qui suis-je ?</a>
+        <a href="#about">Qui suis-je ?</a>
       </li>
       <li>
         <a href="">Compétences</a>
@@ -71,64 +72,191 @@
 </div>
 
 <div class="overflow">
-<section id="about-me">
-  <div class="container d-flex align-items-center justify-content-center flex-column">
-    <h1 data-aos="fade-right" data-aos-once="true">Qui suis-je?</h1>
-    <div class="header-bar" data-aos="fade-right" data-aos-delay="50" data-aos-once="true"></div>
-    <div class="row">
-      <div class="col">
+  <section id="about-me">
+    <div class="container d-flex align-items-center justify-content-center flex-column">
+      <h1 data-aos="fade-right" data-aos-once="true">Qui suis-je?</h1>
+      <div class="header-bar" data-aos="fade-right" data-aos-delay="200" data-aos-once="true"></div>
+      <div class="row">
+        <div class="col">
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="skills">
-  <div class="container d-flex align-items-center justify-content-center flex-column">
-    <h1 data-aos="fade-left" data-aos-once="true">Compétences</h1>
-    <div class="header-bar" data-aos="fade-left" data-aos-delay="50" data-aos-once="true"></div>
-    <div class="row">
-      <div class="col">
-      </div>
-    </div>
-  </div>
-</section>
-<section id="portfolio">
-  <div class="container d-flex align-items-center justify-content-center flex-column">
-    <h1 data-aos="fade-right" data-aos-once="true">Portfolio</h1>
-    <div class="header-bar" data-aos="fade-right" data-aos-delay="50" data-aos-once="true"></div>
-    <div class="row">
-      <div class="col">
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact">
-  <<div class="container d-flex align-items-center justify-content-center flex-column">
-    <h1 data-aos="fade-left" data-aos-once="true">Contact</h1>
-    <div class="header-bar" data-aos="fade-left" data-aos-delay="50" data-aos-once="true"></div>
-    <div class="row mt-4">
-      <div class="col">
-        <form id="contactForm" method="POST" name="contactForm" class="contactForm">
-          <div class="form-group">
-            <input type="text"  name="name" placeholder="Nom*" required>
-            <input type="email" name="email" placeholder="Email*" required>
-            <textarea type="text" name="message" placeholder="Message*" required></textarea>
-          </div>
-          <div id="success">
-            <div>Votre message a été envoyé avec succès. Merci !
-              <span id="close" class="mdi"><i class="fas fa-times"></i></span>
+  <section id="skills">
+    <div class="container d-flex align-items-center justify-content-center flex-column">
+      <h1 data-aos="fade-left" data-aos-once="true">Compétences</h1>
+      <div class="header-bar" data-aos="fade-lef" data-aos-delay="200" data-aos-once="true"></div>
+      <div id="about" class="timeline-container">
+        <div id="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
+              <h4>Collaboration</h4>
+              <div class="row">
+                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo git">
+                  <a href="https://git-scm.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="devicon-git-plain size-logo"></i>
+                    <h5>Git</h5>
+                  </a>
+                </div>
+                <div class="col-6 col-lg-4 col-md-4 col-sm-4 card-logo github">
+                  <a href="https://github.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="devicon-github-plain size-logo"></i>
+                    <h5>GitHub</h5>
+                  </a>
+                </div>
+                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo slack">
+                  <a href="https://slack.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <img src="images/slack-91226fcd.svg" alt="">
+                    <h5>Slack</h5>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <input type="submit" value="Envoyer" id="submit">
-        </form>
+          <div class="timeline-item">
+            <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
+              <h4>Conception</h4>
+              <div class="row">
+                <div class="col card-logo figma">
+                  <a href="https://www.figma.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <img src="images/figma-4aea562e.svg" alt="">
+                    <h5>Figma</h5>
+                  </a>
+                </div>
+                <div class="col card-logo sql">
+                  <a href="https://www.figma.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="fas fa-database size-logo"></i>
+                    <h5>SQL</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
+              <i class="fas fa-keyboard"></i>
+            </div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
+              <h4>Développement</h4>
+              <div class="row">
+                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo ruby">
+                  <a href="https://www.ruby-lang.org/en/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="devicon-ruby-plain size-logo"></i>
+                    <h5>Ruby</h5>
+                  </a>
+                </div>
+                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo rails">
+                  <a href="https://rubyonrails.org/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="devicon-rails-plain size-logo"></i>
+                    <h5>Rails</h5>
+                  </a>
+                </div>
+                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo javascript">
+                  <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="devicon-javascript-plain size-logo"></i>
+                    <h5>JavaScript</h5>
+                  </a>
+                </div>
+                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo postgresql">
+                  <a href="https://www.postgresql.org/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="devicon-postgresql-plain size-logo"></i>
+                    <h5>PostgreSQL</h5>
+                  </a>
+                </div>
+                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo html">
+                  <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="devicon-html5-plain size-logo"></i>
+                    <h5>HTML</h5>
+                  </a>
+                </div>
+                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo css">
+                  <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="devicon-css3-plain size-logo"></i>
+                    <h5>CSS</h5>
+                  </a>
+                </div>
+                 <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo stripe">
+                  <a href="https://stripe.com" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <img src="images/stripe-27bb3ffb.svg" alt="">
+                    <h5>Stripe</h5>
+                  </a>
+                </div>
+                 <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo mailchimp">
+                  <a href="https://mailchimp.com/en/"" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <img src="images/mailchimp-61275a80.svg" alt="">
+                    <h5>Mailchimp</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
+              <h4>Production</h4>
+              <div class="row"></div>
+              <div class="col card-logo heroku">
+                <a href="https://www.heroku.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                  <i class="devicon-heroku-plain size-logo"></i>
+                  <h5>Heroku</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="service">
+    <div class="container d-flex align-items-center justify-content-center flex-column">
+      <h1 data-aos="fade-right" data-aos-once="true">Services</h1>
+      <div class="header-bar" data-aos="fade-right" data-aos-delay="200" data-aos-once="true"></div>
+      <div class="row">
+        <div class="col">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container d-flex align-items-center justify-content-center flex-column">
+      <h1 data-aos="fade-left" data-aos-once="true">Contact</h1>
+      <div class="header-bar" data-aos="fade-left" data-aos-delay="200" data-aos-once="true"></div>
+      <p class="contact-description" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">Envie de discuter ?</p>
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <form id="contactForm" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="800" data-aos-once="true" method="POST" name="contactForm" class="contactForm">
+            <div class="form-group">
+              <input type="text"  name="name" placeholder="Nom*" required>
+              <input type="email" name="email" placeholder="Email*" required>
+              <input type="tel" name="téléphone" placeholder="Téléphone">
+              <textarea type="text" name="message" placeholder="Message*" required></textarea>
+            </div>
+            <div id="success">
+              <div>Votre message a été envoyé avec succès. Merci !
+                <span id="close" class="mdi"><i class="fas fa-times"></i></span>
+              </div>
+            </div>
+            <input type="submit" value="Envoyer" id="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
 <div class="footer">
-    <a href="#home"><i class="fas fa-angle-double-up up"></i></a>
+    <a href="#banner-info"><i class="fas fa-angle-double-up up"></i></a>
     <div class="social-icons d-flex align-items-center justify-content-center">
       <a href="https://www.linkedin.com/in/carine-le-charles/" target="_blank" class="d-flex align-items-center justify-content-center">
         <i class="fab fa-linkedin-in"></i>
@@ -140,17 +268,17 @@
         <i class="fab fa-github"></i>
       </a>
     </div>
-    <div class="text-center copyright">CARINE LE CHARLÈS<span class="highlight">&copy;2018</span></div>
+    <div class="text-center copyright">© 2018 Carine Le Charlès. All rights reserved.</div>
   </div>
 
 
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
     });
   });
  // SEND EMAIL FROM CONTACT FORM
@@ -200,15 +328,15 @@
 
 // BANNER TYPED.JS
 
-  const typed = document.getElementById("typed");
-  if (typed) {
-    new Typed("#typed", {
-      strings: [
-      "Bonjour !<br><br>Je m'appelle Carine. <br>Je suis développeuse web full stack.<br><br>Faisons connaisance..."
-      ],
-      typeSpeed: 50
-    });
-  }
+const typed = document.getElementById("typed");
+if (typed) {
+  new Typed("#typed", {
+    strings: [
+    "Bonjour !<br><br>Je m'appelle Carine. Je suis développeuse web full stack.<br><br>Faisons connaisance..."
+    ],
+    typeSpeed: 50
+  });
+}
 
 
 const bannerInfo = document.getElementById("banner-info");
