@@ -3,11 +3,7 @@
 }
 
 #about-me {
-  background-color: white;
-}
-
-#portfolio {
-  background-color: white;
+  margin-top: 70px;
 }
 
 #skills {
@@ -19,13 +15,14 @@
 }
 
 section {
-  padding: 100px 0 130px 0;
+  padding: 40px 0 80px 0;
   h1 {
     text-align: center;
     padding: 15px 0 15px 0;
     width: 100%;
     color: $gray;
     margin: 0;
+    font-weight: bolder;
   }
 }
 
@@ -35,3 +32,25 @@ section {
   background: $gray;
 }
 
+// .parallax {
+//     background-image: url("../images/skills.jpg");
+//     height: 300px;
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 90%;
+  }
+}
