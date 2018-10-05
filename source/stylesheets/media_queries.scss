@@ -1,33 +1,16 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
-  .height-all-screen-navbar {
-    height: calc(100vh);
-  }
-  .banner {
-    h1 {
-      font-size: 2em;
-      width: 80%;
-    }
-  }
+
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767px) {
-  .banner {
-    h1 {
-      font-size: 2em;
-      width: 80%;
-    }
-  }
+
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991px) {
-  .banner {
-    h1 {
-      width: 80%;
-    }
-  }
+
 }
 
 // Large devices (desktops, 992px and up)
@@ -38,20 +21,4 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
 
-}
-
-@media (hover: hover) {
-  .social-icons {
-    a:hover {
-      background: $green !important;
-      text-shadow: 1px 1px 2px rgba(73, 73, 73, 0.5);
-      transform: scale(0.9);
-    }
-  }
-
-  .card-logo {
-    a:hover {
-      transform: scale(1.1) ;
-    }
-  }
 }

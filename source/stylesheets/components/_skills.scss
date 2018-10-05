@@ -5,16 +5,34 @@
       text-decoration : none;
     }
   }
-  h4 {
+  h5 {
     font-weight: bold;
   }
   .size-logo {
-    font-size: 3.5em;
+    font-size: 3em;
     padding-bottom: 5px;
   }
   img {
-    height: 3.5em;
+    height: 3em;
     padding-bottom: 5px;
+  }
+  &.slack {
+    img {
+      height: 3.4em;
+    }
+  }
+  &.stripe {
+    img {
+      height: 2.6em;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .card-logo {
+    a:hover {
+      transform: scale(1.1) ;
+    }
   }
 }
 
@@ -60,7 +78,187 @@
   }
 }
 
-.border-right {
-  border-right: 2px solid $gray;
-  height: 40px;
+.figma {
+  a {
+    color: #9760F6;
+  }
+}
+
+.sql {
+  a {
+    color: #F4B53F;
+  }
+}
+
+.git {
+  a {
+    color: #E25B39;
+  }
+}
+
+.github {
+  a {
+    color: black;
+  }
+}
+
+.slack {
+  a {
+    color: #2D3238;
+  }
+}
+
+.stripe {
+  a {
+    color: #6773de;
+  }
+}
+
+.mailchimp {
+  a {
+    color: #241C15;
+  }
+}
+
+.timeline-container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+#timeline .timeline-item:after {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+#timeline {
+  width: 90%;
+  position: relative;
+  padding: 0px;
+  width: 90%;
+  margin: 30px;
+}
+
+#timeline:before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: $green;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+#timeline:after {
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+}
+
+#timeline .timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#timeline .timeline-item .timeline-icon {
+  background: $green;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  margin-left: -23px;
+  border-radius: 50%;
+}
+
+#timeline .timeline-item .timeline-icon .fas {
+  font-size: 24px;
+  color: #fff;
+}
+#timeline .timeline-item .timeline-content {
+  width: 90%;
+  background: #fff;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+  left: 7%;
+}
+
+#timeline .timeline-item .timeline-content h4 {
+  padding: 10px;
+  background: $green;
+  color: #fff;
+  border-radius: 3px 3px 0 0;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+#timeline .timeline-item .timeline-content .card-logo {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#timeline .timeline-item .timeline-content:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 0;
+  border-right: 7px solid $green;
+  margin-left: -6px;
+}
+
+@media (max-width: 575px) {
+  #timeline {
+    margin: 20px;
+  }
+  #timeline .timeline-item .timeline-content {
+    left: 13%;
+  }
+  .card-logo {
+    .size-logo {
+      font-size: 2.8em;
+    }
+    img {
+      height: 2.8em;
+    }
+    .slack, img {
+      height: 3.2em;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+   #timeline {
+    margin: 20px;
+  }
+  #timeline .timeline-item .timeline-content {
+    left: 13%;
+  }
+  .card-logo {
+    .size-logo {
+      font-size: 2.8em;
+    }
+    img {
+      height: 2.8em;
+    }
+    &.slack {
+      img {
+        height: 3.2em;
+      }
+    }
+    &.stripe {
+      img {
+        height: 2.4em;
+      }
+    }
+  }
 }
