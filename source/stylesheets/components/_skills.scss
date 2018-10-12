@@ -9,21 +9,14 @@
     font-weight: bold;
   }
   .size-logo {
-    font-size: 3em;
+    font-size: 40px;
     padding-bottom: 5px;
   }
-  img {
-    height: 3em;
+  .size-img {
+    height: 45px;
     padding-bottom: 5px;
-  }
-  &.slack {
     img {
-      height: 3.4em;
-    }
-  }
-  &.stripe {
-    img {
-      height: 2.6em;
+    height: 100%;
     }
   }
 }
@@ -194,6 +187,7 @@
   border-radius: 3px 3px 0 0;
   font-size: 1.4em;
   text-align: center;
+  font-weight: lighter;
 }
 
 #timeline .timeline-item .timeline-content .card-logo {
@@ -219,46 +213,55 @@
   #timeline {
     margin: 20px;
   }
+  #timeline:before, #timeline .timeline-item {
+    left: -5%;
+  }
   #timeline .timeline-item .timeline-content {
-    left: 13%;
+    left: 14%;
+    width: 100%;
+  }
+  #timeline .timeline-item .timeline-content .row {
+    margin-right: 0;
+    margin-left: 0;
   }
   .card-logo {
+    h5 {
+      font-size: 1em;
+    }
     .size-logo {
-      font-size: 2.8em;
+      font-size: 32px;
     }
-    img {
-      height: 2.8em;
-    }
-    .slack, img {
-      height: 3.2em;
+    .size-img {
+    height: 37px;
     }
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767px) {
-   #timeline {
+  #timeline {
     margin: 20px;
   }
+  #timeline:before, #timeline .timeline-item {
+    left: -5%;
+  }
   #timeline .timeline-item .timeline-content {
-    left: 13%;
+    left: 14%;
+    width: 100%;
+  }
+  #timeline .timeline-item .timeline-content .row {
+    margin-right: 0;
+    margin-left: 0;
   }
   .card-logo {
+     h5 {
+      font-size: 1em;
+    }
     .size-logo {
-      font-size: 2.8em;
+      font-size: 29px;
     }
-    img {
-      height: 2.8em;
-    }
-    &.slack {
-      img {
-        height: 3.2em;
-      }
-    }
-    &.stripe {
-      img {
-        height: 2.4em;
-      }
+   .size-img {
+    height: 34px;
     }
   }
 }

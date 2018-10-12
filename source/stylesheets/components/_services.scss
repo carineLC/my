@@ -1,0 +1,59 @@
+#services-list {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.card-services {
+  width: 100%;
+  height: 18em;
+  margin: 10px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  &.card-services-webdesign {
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.3) 0%, rgba(49,58,81,0.4) 50%, rgba(27,36,47,0.4) 100%),
+    url(../images/webdesign.jpg);
+  }
+  &.card-services-responsivedesign {
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.3) 0%, rgba(49,58,81,0.4) 50%, rgba(27,36,47,0.4) 100%),
+    url(../images/responsivedesign.jpg);
+  }
+  &.card-services-webdev {
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.3) 0%, rgba(49,58,81,0.4) 50%, rgba(27,36,47,0.4) 100%),
+    url(../images/webdev.jpg);
+  }
+  .card-services-content {
+    color: white;
+    font-weight: lighter;
+  }
+}
+
+.card-services-hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(49, 58, 81, 0.7);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 5px;
+  h4 {
+    color: white;
+    text-align: center;
+    padding: 0 10px;
+    font-weight: lighter;
+  }
+}
+
+.card-services:hover {
+  .card-services-hover {
+    opacity: 1;
+  }
+  .card-services-content {
+    display: none;
+  }
+}

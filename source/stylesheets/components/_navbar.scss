@@ -12,6 +12,7 @@
     color: white;
     text-transform: uppercase;
     padding-bottom: 8px;
+    font-family : "PT Sans", sans-serif;
     &.title::before {
       content: "";
       position: absolute;
@@ -86,7 +87,7 @@
 
 .overlay {
   position: fixed;
-  background: $gray;
+  background: $light-blue;
   top: 0;
   left: 0;
   width: 100%;
@@ -96,7 +97,7 @@
   overflow: hidden;
   transition: opacity 0.35s, visibility 0.35s, height 0.35s;
   &.open {
-    opacity: 0.9;
+    opacity: 1;
     visibility: visible;
     height: 100%;
     z-index: 100;

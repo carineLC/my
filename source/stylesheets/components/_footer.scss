@@ -8,8 +8,7 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    background: $yellow;
-    text-shadow: 1px 1px 2px rgba(73, 73, 73, 0.5);
+    background: $green;
     text-align: center;
     color: white;
     font-size: 2.2em;
@@ -18,6 +17,7 @@
     cursor: pointer;
     transition: all 0.5s;
     line-height: 1.4em;
+    border-radius: 5px;
     &:hover {
       opacity: 0.9;
     }
@@ -36,9 +36,11 @@
         margin: 0 15px;
         background: $light-blue;
         font-size: 1.7em;
+        border-radius: 5px;
       }
       &:hover {
         text-decoration: none;
+        color: $light-blue;
       }
     }
   }
@@ -47,15 +49,16 @@
     color: $light-gray;
     margin-top: 40px;
     font-size: .75em;
+    font-weight: lighter;
   }
 }
 
 @media (hover: hover) {
   .social-icons {
     a:hover {
-      background: $green !important;
-      text-shadow: 1px 1px 2px rgba(73, 73, 73, 0.5);
+      background: $yellow !important;
       transform: scale(0.9);
+      color: $light-blue;
     }
   }
 }
