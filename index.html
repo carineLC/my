@@ -9,15 +9,16 @@
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-    <link href="stylesheets/application-4f05ac67.css" rel="stylesheet" />
+    <link href="stylesheets/application-dcbdb100.css" rel="stylesheet" />
     <script src="javascripts/application-2eb7662f.js"></script>
     <link href="images/images/favicon.png" rel="icon" type="image/png" />
   </head>
-  <body>
-    <div class="banner height-all-screen-navbar text-white" >
+  <body ontouchstart="">
+    <div id="home" class="banner height-all-screen-navbar text-white" >
  <div id="banner-info" class="height-all-screen position-relative d-flex align-items-center justify-content-center display-banner-info">
   <h1 class="font-weight-bold text-center"><span id="typed"></span></h1>
   <div class="d-none d-sm-block scroll">
@@ -28,7 +29,7 @@
 </div>
 
  <!--  HAMBURGER MENU -->
-<div id="toggle" class="button-container d-block d-sm-none">
+<div id="toggle" class="button-container d-block d-md-none">
   <span class="top"></span>
   <span class="middle"></span>
   <span class="bottom"></span>
@@ -37,16 +38,16 @@
   <nav class="overlay-menu">
     <ul>
       <li>
-        <a href="#about">Qui suis-je ?</a>
+        <a id="overlay-menu-element" href="#about-me">Qui suis-je ?</a>
       </li>
       <li>
-        <a href="">Compétences</a>
+        <a id="overlay-menu-element" href="#skills">Compétences</a>
       </li>
       <li>
-        <a href="">Portfolio</a>
+        <a id="overlay-menu-element" href="#services">Services</a>
       </li>
       <li>
-        <a href="">Contact</a>
+        <a id="overlay-menu-element" href="#contact">Contact</a>
       </li>
     </ul>
   </nav>
@@ -54,214 +55,254 @@
 
 <div id="navbar" class="navbar bg-transparent d-flex justify-content-center">
   <!--   LOGO NAVBAR PHONE -->
-  <a id="logo-navbar-phone" class="d-block d-sm-none invisible" href="">
+  <a id="logo-navbar-phone" class="d-block d-md-none invisible" href="#home">
     <img src="images/logo-yellow-938fd9a8.png" alt="logo clc">
   </a>
   <!-- NAVBAR -->
   <ul class="w-100 m-0 list-inline d-flex justify-content-center align-items-center text-center">
-    <li class="d-none d-sm-block"><a class="title" href="">Qui suis-je ?</a></li>
-    <li class="d-none d-sm-block"><a class="title" href="">Compétences</a></li>
-    <li class="d-none d-sm-block"><a href="">
+    <li class="d-none d-md-block"><a class="title" href="#about-me">Qui suis-je ?</a></li>
+    <li class="d-none d-md-block"><a class="title" href="#skills">Compétences</a></li>
+    <li class="d-none d-md-block"><a href="#home">
       <img id="logo" src="images/logo-grey-197bb6f4.png" alt="logo clc">
     </a></li>
-    <li class="d-none d-sm-block"><a class="title" href="">Portfolio</a></li>
-    <li class="d-none d-sm-block"><a class="title" href="">Contact</a></li>
+    <li class="d-none d-md-block"><a class="title" href="#services">Services</a></li>
+    <li class="d-none d-md-block"><a class="title" href="#contact">Contact</a></li>
   </ul>
 </div>
 
 </div>
 
 <div class="overflow">
-  <section id="about-me">
+  <span class="anchor" id="about-me"></span>
+  <section class="about-me">
     <div class="container d-flex align-items-center justify-content-center flex-column">
       <h1 data-aos="fade-right" data-aos-once="true">Qui suis-je?</h1>
       <div class="header-bar" data-aos="fade-right" data-aos-delay="200" data-aos-once="true"></div>
       <div class="row">
-        <div class="col">
+        <div class="profile d-flex align-items-center">
+          <div class="col-12 col-md-6 text-center">
+            <img src="images/my-9ec0c3c8.jpg" alt="moi">
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="profile-content">
+              <h5 class="text-justify">
+                Degemer mat ! Bienvenue ! Malouine de naissance, je vis maintenant à Bordeaux. Je suis développeuse web full stack. J'ai la capacité de créer en totale autonomie une application web poussée, autant sur la partie front-end que sur la partie back-end.
+                <br>
+                <br>
+                Vous souhaitez avoir une présence en ligne ? Présenter un prototype ? Développer votre produit ? Je souhaite à travers votre projet faire resortir une expérience unique qui permettra de partager votre vision à vos clients.
+              </h5>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills">
-    <div class="container d-flex align-items-center justify-content-center flex-column">
-      <h1 data-aos="fade-left" data-aos-once="true">Compétences</h1>
-      <div class="header-bar" data-aos="fade-lef" data-aos-delay="200" data-aos-once="true"></div>
-      <div id="about" class="timeline-container">
-        <div id="timeline">
-          <div class="timeline-item">
-            <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
-              <i class="fas fa-handshake"></i>
+    <span class="anchor" id="skills"></span>
+    <section class="skills" >
+      <div class="container d-flex align-items-center justify-content-center flex-column">
+        <h1 data-aos="fade-left" data-aos-once="true">Compétences</h1>
+        <div class="header-bar" data-aos="fade-lef" data-aos-delay="200" data-aos-once="true"></div>
+        <div id="about" class="timeline-container">
+          <div id="timeline">
+            <div class="timeline-item">
+              <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
+                <h4>Collaboration</h4>
+                <div class="row">
+                  <div class="col-4 card-logo git">
+                    <a href="https://git-scm.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <i class="devicon-git-plain size-logo"></i>
+                      <h5>Git</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo github">
+                    <a href="https://github.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <i class="devicon-github-plain size-logo"></i>
+                      <h5>GitHub</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo slack">
+                    <a href="https://slack.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <span class="size-img"><img src="images/slack-91226fcd.svg" alt=""></span>
+                      <h5>Slack</h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
-              <h4>Collaboration</h4>
-              <div class="row">
-                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo git">
-                  <a href="https://git-scm.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <i class="devicon-git-plain size-logo"></i>
-                    <h5>Git</h5>
-                  </a>
+            <div class="timeline-item">
+              <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
+                <h4>Conception</h4>
+                <div class="row">
+                  <div class="col-4 card-logo figma">
+                    <a href="https://www.figma.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <span class="size-img"><img src="images/figma-4aea562e.svg" alt=""></span>
+                      <h5>Figma</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo sql">
+                    <a href="https://www.figma.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <i class="fas fa-database size-logo"></i>
+                      <h5>SQL</h5>
+                    </a>
+                  </div>
                 </div>
-                <div class="col-6 col-lg-4 col-md-4 col-sm-4 card-logo github">
-                  <a href="https://github.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <i class="devicon-github-plain size-logo"></i>
-                    <h5>GitHub</h5>
-                  </a>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
+                <i class="fas fa-keyboard"></i>
+              </div>
+              <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
+                <h4>Développement</h4>
+                <div class="row">
+                  <div class="col-4 card-logo ruby">
+                    <a href="https://www.ruby-lang.org/en/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <i class="devicon-ruby-plain size-logo"></i>
+                      <h5>Ruby</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo rails">
+                    <a href="https://rubyonrails.org/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <i class="devicon-rails-plain size-logo"></i>
+                      <h5>Rails</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo javascript">
+                    <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <i class="devicon-javascript-plain size-logo"></i>
+                      <h5>JavaScript</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo postgresql">
+                    <a href="https://www.postgresql.org/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <i class="devicon-postgresql-plain size-logo"></i>
+                      <h5>PostgreSQL</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo html">
+                    <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <i class="devicon-html5-plain size-logo"></i>
+                      <h5>HTML</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo css">
+                    <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <i class="devicon-css3-plain size-logo"></i>
+                      <h5>CSS</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo stripe">
+                    <a href="https://stripe.com" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <span class="size-img"><img src="images/stripe-27bb3ffb.svg" alt="stripe"></span>
+                      <h5>Stripe</h5>
+                    </a>
+                  </div>
+                  <div class="col-4 card-logo mailchimp">
+                    <a href="https://mailchimp.com/en/"" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                      <span class="size-img"><img src="images/mailchimp-61275a80.svg" alt="mailchimp"></span>
+                      <h5>Mailchimp</h5>
+                    </a>
+                  </div>
                 </div>
-                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo slack">
-                  <a href="https://slack.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <img src="images/slack-91226fcd.svg" alt="">
-                    <h5>Slack</h5>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
+                <h4>Production</h4>
+                <div class="row"></div>
+                <div class="col-4 card-logo heroku">
+                  <a href="https://www.heroku.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
+                    <i class="devicon-heroku-plain size-logo"></i>
+                    <h5>Heroku</h5>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
-              <h4>Conception</h4>
-              <div class="row">
-                <div class="col card-logo figma">
-                  <a href="https://www.figma.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <img src="images/figma-4aea562e.svg" alt="">
-                    <h5>Figma</h5>
-                  </a>
-                </div>
-                <div class="col card-logo sql">
-                  <a href="https://www.figma.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <i class="fas fa-database size-logo"></i>
-                    <h5>SQL</h5>
-                  </a>
+        </div>
+      </div>
+    </section>
+
+    <span class="anchor" id="services"></span>
+    <section class="services">
+      <div class="container d-flex align-items-center justify-content-center flex-column">
+        <h1 data-aos="fade-right" data-aos-once="true">Services</h1>
+        <div class="header-bar" data-aos="fade-right" data-aos-delay="200" data-aos-once="true"></div>
+        <div id="services-list">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <div class="card-services card-services-webdesign d-flex align-items-center justify-content-center" data-aos="flip-left" data-aos-duration="700" data-aos-once="true">
+                <h2 class="card-services-content">Web design</h2>
+                <div class="card-services-hover d-flex align-items-center justify-content-center">
+                  <h4>Convevoir une interface web simple, ergonomique et facile d'utilisation pour améliorer l'expérience utilisateur.</h4>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
-              <i class="fas fa-keyboard"></i>
-            </div>
-            <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
-              <h4>Développement</h4>
-              <div class="row">
-                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo ruby">
-                  <a href="https://www.ruby-lang.org/en/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <i class="devicon-ruby-plain size-logo"></i>
-                    <h5>Ruby</h5>
-                  </a>
-                </div>
-                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo rails">
-                  <a href="https://rubyonrails.org/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <i class="devicon-rails-plain size-logo"></i>
-                    <h5>Rails</h5>
-                  </a>
-                </div>
-                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo javascript">
-                  <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <i class="devicon-javascript-plain size-logo"></i>
-                    <h5>JavaScript</h5>
-                  </a>
-                </div>
-                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo postgresql">
-                  <a href="https://www.postgresql.org/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <i class="devicon-postgresql-plain size-logo"></i>
-                    <h5>PostgreSQL</h5>
-                  </a>
-                </div>
-                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo html">
-                  <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <i class="devicon-html5-plain size-logo"></i>
-                    <h5>HTML</h5>
-                  </a>
-                </div>
-                <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo css">
-                  <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <i class="devicon-css3-plain size-logo"></i>
-                    <h5>CSS</h5>
-                  </a>
-                </div>
-                 <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo stripe">
-                  <a href="https://stripe.com" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <img src="images/stripe-27bb3ffb.svg" alt="">
-                    <h5>Stripe</h5>
-                  </a>
-                </div>
-                 <div class="col-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 card-logo mailchimp">
-                  <a href="https://mailchimp.com/en/"" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                    <img src="images/mailchimp-61275a80.svg" alt="">
-                    <h5>Mailchimp</h5>
-                  </a>
+            <div class="col-12 col-md-4">
+              <div class="card-services card-services-responsivedesign d-flex align-items-center justify-content-center" data-aos="flip-left" data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+                <h2 class="card-services-content">Responsive design</h2>
+                <div class="card-services-hover d-flex align-items-center justify-content-center">
+                  <h4>Adapter le contenu et l’apparence du site en fonction du type d’appareil utilisé pour le consulter (ordinateur, tablette ou smartphone).</h4>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-icon d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <div class="timeline-content" data-aos="fade-left" data-aos-once="true" data-aos-duration="700">
-              <h4>Production</h4>
-              <div class="row"></div>
-              <div class="col card-logo heroku">
-                <a href="https://www.heroku.com/" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                  <i class="devicon-heroku-plain size-logo"></i>
-                  <h5>Heroku</h5>
-                </a>
+            <div class="col-12 col-md-4">
+              <div class="card-services card-services-webdev  d-flex align-items-center justify-content-center" data-aos="flip-left" data-aos-delay="400" data-aos-duration="700" data-aos-once="true">
+                <h2 class="card-services-content">Web development</h2>
+                <div class="card-services-hover d-flex align-items-center justify-content-center">
+                  <h4>Développer un site vitrine jusqu'au site dynamique avec une connexion à une base de données. La seule limite est votre imagination !</h4>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="service">
-    <div class="container d-flex align-items-center justify-content-center flex-column">
-      <h1 data-aos="fade-right" data-aos-once="true">Services</h1>
-      <div class="header-bar" data-aos="fade-right" data-aos-delay="200" data-aos-once="true"></div>
-      <div class="row">
-        <div class="col">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container d-flex align-items-center justify-content-center flex-column">
-      <h1 data-aos="fade-left" data-aos-once="true">Contact</h1>
-      <div class="header-bar" data-aos="fade-left" data-aos-delay="200" data-aos-once="true"></div>
-      <p class="contact-description" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">Envie de discuter ?</p>
-      <div class="row">
-        <div class="col d-flex justify-content-center">
-          <form id="contactForm" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="800" data-aos-once="true" method="POST" name="contactForm" class="contactForm">
-            <div class="form-group">
-              <input type="text"  name="name" placeholder="Nom*" required>
-              <input type="email" name="email" placeholder="Email*" required>
-              <input type="tel" name="téléphone" placeholder="Téléphone">
-              <textarea type="text" name="message" placeholder="Message*" required></textarea>
-            </div>
-            <div id="success">
-              <div>Votre message a été envoyé avec succès. Merci !
-                <span id="close" class="mdi"><i class="fas fa-times"></i></span>
+    <span class="anchor" id="contact"></span>
+    <section class="contact">
+      <div class="container d-flex align-items-center justify-content-center flex-column">
+        <h1 data-aos="fade-left" data-aos-once="true">Contact</h1>
+        <div class="header-bar" data-aos="fade-left" data-aos-delay="200" data-aos-once="true"></div>
+        <p class="contact-description" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">Envie d'échanger sur ton projet ?</p>
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <form id="contactForm" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="700" data-aos-once="true" method="POST" name="contactForm" class="contactForm">
+              <div class="form-group">
+                <input type="text"  name="name" placeholder="Nom*" required>
+                <input type="email" name="email" placeholder="Email*" required>
+                <input type="tel" name="téléphone" placeholder="Téléphone">
+                <textarea type="text" name="message" placeholder="Message*" required></textarea>
               </div>
-            </div>
-            <input type="submit" value="Envoyer" id="submit">
-          </form>
+              <div id="success">
+                <div>Votre message a été envoyé avec succès. Merci !
+                  <span id="close" class="mdi"><i class="fas fa-times"></i></span>
+                </div>
+              </div>
+              <input type="submit" value="Envoyer" id="submit">
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 
-<div class="footer">
+  <div class="footer">
     <a href="#banner-info"><i class="fas fa-angle-double-up up"></i></a>
     <div class="social-icons d-flex align-items-center justify-content-center">
       <a href="https://www.linkedin.com/in/carine-le-charles/" target="_blank" class="d-flex align-items-center justify-content-center">
         <i class="fab fa-linkedin-in"></i>
       </a>
-      <a href="http://www.viadeo.com/p/002174xj5a7aqllj" target="_blank" class="d-flex align-items-center justify-content-center">
+      <a href="http://www.viadeo.com/fr/profile/carine.le-charles" target="_blank" class="d-flex align-items-center justify-content-center">
         <i class="fab fa-viadeo"></i>
       </a>
       <a href="https://github.com/carineLC" target="_blank" class="d-flex align-items-center justify-content-center">
@@ -272,62 +313,119 @@
   </div>
 
 
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
- // SEND EMAIL FROM CONTACT FORM
- const form = document.getElementById('contactForm');
- const formspreeEmail = 'carine.le.charles@gmail.com';
- const success = document.getElementById('success');
- const close = document.getElementById('close');
-    // Convert form data to json
-    const formDataToJson = formData => {
-      const entries = formData.entries();
-      const dataObj = Array.from(entries).reduce( (data, [key, value]) => {
-        data[key] = value;
-        if (key === "email") {
-          data._replyTo = value;
-        }
-        return data;
-      }, {});
-      return JSON.stringify(dataObj);
-    };
+ <div id="search">Contact</div>
 
-    //Post request with fetch
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+  <script>
+    console.log("coco")
 
-      const formData = new FormData(form);
-      formData.append('_subject', 'Message from CLC website');
 
-      fetch(`https://formspree.io/${ formspreeEmail }`, {
-        method: 'POST',
-        body: formDataToJson(formData),
+    const searchAlgoliaPlaces = (event) => {
+      console.log("toto")
+      fetch(" https://api.sendgrid.com/v3/mail/send", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Authorization": "Bearer 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",
+          "Content-Type": "application/json"
+        },
+        body: {
+  "personalizations": [
+    {
+      "to": [
+        {
+          "email": "carine.le.charles@gmail.com",
+          "name": "John Doe"
         }
+      ],
+      "subject": "Hello, World!"
+    }
+  ],
+  "from": {
+    "email": "sam.smith@example.com",
+    "name": "Sam Smith"
+  },
+  "reply_to": {
+    "email": "sam.smith@example.com",
+    "name": "Sam Smith"
+  },
+  "content": [
+    {
+      "type": "text/plain",
+      "value": "Hello, World!"
+    }
+  ]
+}
       })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success === 'email sent') {
-          success.classList.add("expand");
-          form.reset();
-        };
+        .then(response => response.json())
+        .then((data) => {
+          console.log(data.hits); // Look at local_names.default
+        });
+    }
+
+    const input = document.getElementById("search"); // that's an <input id="search">
+    input.addEventListener("click", searchAlgoliaPlaces);
+
+  </script>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       });
     });
 
-    close.addEventListener('click', () => {
-      success.classList.remove("expand");
-    });
+// SEND EMAIL FROM CONTACT FORM
+const form = document.getElementById('contactForm');
+const formspreeEmail = 'carine.le.charles@gmail.com';
+const success = document.getElementById('success');
+const close = document.getElementById('close');
+// Convert form data to json
+const formDataToJson = formData => {
+  const entries = formData.entries();
+  const dataObj = Array.from(entries).reduce( (data, [key, value]) => {
+    data[key] = value;
+    if (key === "email") {
+      data._replyTo = value;
+    }
+    return data;
+  }, {});
+  return JSON.stringify(dataObj);
+};
+
+//Post request with fetch
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  formData.append('_subject', 'Message from CLC website');
+
+//   fetch(`https://api.sendgrid.com/v3/mail/send`, {
+//     method: 'POST',
+//     body: formDataToJson(formData),
+//     headers: {
+//       'Access-Control-Allow-Origin': '*',
+//       'Access-Control-Allow-Credentials': true,
+//       'Authorization': 'Bearer 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',
+//       'Content-Type': 'application/json'
+//     }
+//   })
+//   .then(response => response.json())
+//   .then(data => {
+//     if (data.success === 'email sent') {
+//       success.classList.add("expand");
+//       form.reset();
+//     };
+//   });
+// });
+
+close.addEventListener('click', () => {
+  success.classList.remove("expand");
+});
 
 // BANNER TYPED.JS
-
 const typed = document.getElementById("typed");
 if (typed) {
   new Typed("#typed", {
@@ -338,14 +436,15 @@ if (typed) {
   });
 }
 
-
 const bannerInfo = document.getElementById("banner-info");
 const navbar = document.getElementById("navbar");
 const logoNavbar = document.getElementById("logo");
 const logoNavbarPhone = document.getElementById("logo-navbar-phone");
 const hamb = document.getElementById("toggle");
+const hambElement = document.querySelectorAll("#overlay-menu-element");
 const overlay = document.getElementById("overlay");
 const body = document.body;
+
 // BANNER INFO DISAPPEARS ON SCROLL
 window.addEventListener("scroll", () => {
   if (bannerInfo) {
@@ -354,7 +453,7 @@ window.addEventListener("scroll", () => {
       bannerInfo.classList.add("hide-banner-info");
     } else {
       bannerInfo.classList.remove("hide-banner-info");
-      bannerInfo.classList.add("display");
+      bannerInfo.classList.add("display-banner-info");
     }
   }
 });
@@ -392,6 +491,15 @@ hamb.addEventListener("click", () => {
  hamb.classList.toggle('active');
  overlay.classList.toggle('open');
  body.classList.toggle('noscroll');
+});
+
+// CLOSE MENU HAMBURGER
+hambElement.forEach(element => {
+  element.addEventListener("click", () => {
+   hamb.classList.remove('active');
+   overlay.classList.remove('open');
+   body.classList.remove('noscroll');
+ });
 });
 </script>
 
