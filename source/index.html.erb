@@ -9,8 +9,7 @@
     <div class="container d-flex align-items-center justify-content-center flex-column">
       <h1 data-aos="fade-right" data-aos-once="true">Qui suis-je?</h1>
       <div class="header-bar" data-aos="fade-right" data-aos-delay="200" data-aos-once="true"></div>
-      <div class="row">
-        <div class="profile d-flex align-items-center">
+      <div class="row profile d-flex align-items-center">
           <div class="col-12 col-md-6 text-center">
             <img src="images/my.jpg" alt="moi">
           </div>
@@ -24,7 +23,6 @@
               </h5>
             </div>
           </div>
-        </div>
       </div>
     </section>
 
@@ -229,59 +227,6 @@
 
   <%= partial "shared/footer" %>
 
- <div id="search">Contact</div>
-
-  <script>
-    console.log("coco")
-
-
-    const searchAlgoliaPlaces = (event) => {
-      console.log("toto")
-      fetch(" https://api.sendgrid.com/v3/mail/send", {
-        method: "POST",
-        headers: {
-          "Authorization": "Bearer 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",
-          "Content-Type": "application/json"
-        },
-        body: {
-  "personalizations": [
-    {
-      "to": [
-        {
-          "email": "carine.le.charles@gmail.com",
-          "name": "John Doe"
-        }
-      ],
-      "subject": "Hello, World!"
-    }
-  ],
-  "from": {
-    "email": "sam.smith@example.com",
-    "name": "Sam Smith"
-  },
-  "reply_to": {
-    "email": "sam.smith@example.com",
-    "name": "Sam Smith"
-  },
-  "content": [
-    {
-      "type": "text/plain",
-      "value": "Hello, World!"
-    }
-  ]
-}
-      })
-        .then(response => response.json())
-        .then((data) => {
-          console.log(data.hits); // Look at local_names.default
-        });
-    }
-
-    const input = document.getElementById("search"); // that's an <input id="search">
-    input.addEventListener("click", searchAlgoliaPlaces);
-
-  </script>
-
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -318,24 +263,21 @@ form.addEventListener('submit', (e) => {
   const formData = new FormData(form);
   formData.append('_subject', 'Message from CLC website');
 
-//   fetch(`https://api.sendgrid.com/v3/mail/send`, {
-//     method: 'POST',
-//     body: formDataToJson(formData),
-//     headers: {
-//       'Access-Control-Allow-Origin': '*',
-//       'Access-Control-Allow-Credentials': true,
-//       'Authorization': 'Bearer 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',
-//       'Content-Type': 'application/json'
-//     }
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     if (data.success === 'email sent') {
-//       success.classList.add("expand");
-//       form.reset();
-//     };
-//   });
-// });
+  fetch(`https://formspree.io/${ formspreeEmail }`, {
+    method: 'POST',
+    body: formDataToJson(formData),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success === 'email sent') {
+      success.classList.add("expand");
+      form.reset();
+    };
+  });
+});
 
 close.addEventListener('click', () => {
   success.classList.remove("expand");
