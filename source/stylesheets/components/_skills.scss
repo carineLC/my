@@ -126,10 +126,9 @@
 }
 
 #timeline {
-  width: 90%;
+  width: 100%;
   position: relative;
   padding: 0px;
-  width: 90%;
   margin: 30px;
 }
 
@@ -214,11 +213,11 @@
     margin: 20px;
   }
   #timeline:before, #timeline .timeline-item {
-    left: -5%;
+    left: 0;
+    left: -10px;
   }
   #timeline .timeline-item .timeline-content {
-    left: 14%;
-    width: 100%;
+    left: 12%;
   }
   #timeline .timeline-item .timeline-content .row {
     margin-right: 0;
@@ -243,11 +242,10 @@
     margin: 20px;
   }
   #timeline:before, #timeline .timeline-item {
-    left: -5%;
+    left: 0;
   }
   #timeline .timeline-item .timeline-content {
-    left: 14%;
-    width: 100%;
+    left: 7%;
   }
   #timeline .timeline-item .timeline-content .row {
     margin-right: 0;
