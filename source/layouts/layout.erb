@@ -28,17 +28,19 @@
   <meta name="twitter:creator" content="@rinou_lc">
   <meta name="twitter:image:src" content="https://www.carinelecharles.fr/images/banner-8b28ba6d.jpg">
 
-  <link rel="canonical" href="https://www.carinelecharles.fr/">
+  <link rel="canonical" href="https://www.carinelecharles.fr">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|PT+Sans:400,700" rel="stylesheet">
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-  <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "application" %>
   <%= favicon_tag "favicon.ico" %>
 </head>
 <body>
   <%= yield %>
+
+
   <script src="../javascripts/typed.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
