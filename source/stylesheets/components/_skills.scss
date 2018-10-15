@@ -5,7 +5,7 @@
       text-decoration : none;
     }
   }
-  h5 {
+  p {
     font-weight: bold;
   }
   .size-logo {
@@ -179,7 +179,7 @@
   left: 7%;
 }
 
-#timeline .timeline-item .timeline-content h4 {
+#timeline .timeline-item .timeline-content h3 {
   padding: 10px;
   background: $green;
   color: #fff;
@@ -224,9 +224,6 @@
     margin-left: 0;
   }
   .card-logo {
-    h5 {
-      font-size: 1em;
-    }
     .size-logo {
       font-size: 32px;
     }
@@ -252,9 +249,6 @@
     margin-left: 0;
   }
   .card-logo {
-     h5 {
-      font-size: 1em;
-    }
     .size-logo {
       font-size: 29px;
     }
