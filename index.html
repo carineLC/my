@@ -5,10 +5,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <!-- Use the title from a page's frontmatter if it has one -->
   <title>Carine Le Charlès | Développeur web full stack</title>
   <meta name="description" content="Développeur freelance basé à Bordeaux, je me tiens à votre disposition pour toute proposition de missions dans le développement web.">
-  <meta name="keywords" content="site internet, développeur, web, fullstack, freelance, Bordeaux, mission, Ruby On rails, Javascript">
+  <meta name="keywords" content="site internet, développeur, web, full stack, freelance, Bordeaux, mission, Ruby On rails, Javascript">
 
   <!-- Facebook Open Graph data -->
   <meta property="og:title" content="Carine Le Charlès | Développeur web full stack" />
@@ -19,8 +20,6 @@
   <meta property="fb:app_id" content="2162363410668536" />
   <meta property="og:locale" content="fr_FR" />
 
-  <link href="images/favicon.ico" rel="icon" type="image/ico" />
-
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
@@ -29,7 +28,7 @@
 
   <link href="stylesheets/application-25e7863c.css" rel="stylesheet" />
   <script src="javascripts/application-2eb7662f.js"></script>
-  <link href="images/images/favicon.png" rel="icon" type="image/png" />
+  <link href="images/favicon.ico" rel="icon" type="image/ico" />
 </head>
 <body>
   <div id="home" class="banner height-all-screen-navbar text-white" >
@@ -328,15 +327,15 @@
 
 
   <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
       });
     });
+  });
 
 // SEND EMAIL FROM CONTACT FORM
 const form = document.getElementById('contactForm');
@@ -357,31 +356,35 @@ const formDataToJson = formData => {
 };
 
 //Post request with fetch
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  const formData = new FormData(form);
-  formData.append('_subject', 'Message from CLC website');
+    const formData = new FormData(form);
+    formData.append('_subject', 'Message from CLC website');
 
-  fetch(`https://formspree.io/${ formspreeEmail }`, {
-    method: 'POST',
-    body: formDataToJson(formData),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(response => response.json())
-  .then(data => {
-    if (data.success === 'email sent') {
-      success.classList.add("expand");
-      form.reset();
-    };
+    fetch(`https://formspree.io/${ formspreeEmail }`, {
+      method: 'POST',
+      body: formDataToJson(formData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success === 'email sent') {
+        success.classList.add("expand");
+        form.reset();
+      };
+    });
   });
-});
+}
 
-close.addEventListener('click', () => {
-  success.classList.remove("expand");
-});
+if (close) {
+  close.addEventListener('click', () => {
+    success.classList.remove("expand");
+  });
+}
 
 // BANNER TYPED.JS
 const typed = document.getElementById("typed");
@@ -445,21 +448,27 @@ window.addEventListener("scroll", () => {
 });
 
 // OPEN MENU HAMBURGER
-hamb.addEventListener("click", () => {
- hamb.classList.toggle('active');
- overlay.classList.toggle('open');
- body.classList.toggle('noscroll');
-});
+if (hamb) {
+  hamb.addEventListener("click", () => {
+   hamb.classList.toggle('active');
+   overlay.classList.toggle('open');
+   body.classList.toggle('noscroll');
+ });
+}
 
 // CLOSE MENU HAMBURGER
-hambElement.forEach(element => {
-  element.addEventListener("click", () => {
-   hamb.classList.remove('active');
-   overlay.classList.remove('open');
-   body.classList.remove('noscroll');
- });
-});
+if (hambElement) {
+  hambElement.forEach(element => {
+    element.addEventListener("click", () => {
+     hamb.classList.remove('active');
+     overlay.classList.remove('open');
+     body.classList.remove('noscroll');
+   });
+  });
+}
+
 </script>
+
 
   <script src="javascripts/typed-f01cefa5.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
