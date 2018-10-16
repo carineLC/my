@@ -51,7 +51,6 @@
 
 // SEND EMAIL FROM CONTACT FORM
 const form = document.getElementById('contactForm');
-const formspreeEmail = 'carine.le.charles@gmail.com';
 const success = document.getElementById('success');
 const close = document.getElementById('close');
 // Convert form data to json
@@ -75,8 +74,8 @@ if (form) {
     const formData = new FormData(form);
     formData.append('_subject', 'Message from CLC website');
 
-    fetch(`https://formspree.io/${ formspreeEmail }`, {
-      method: 'POST',
+    fetch(form.action, {
+      method: form.method,
       body: formDataToJson(formData),
       headers: {
         'Content-Type': 'application/json'
