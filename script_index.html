@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Use the title from a page's frontmatter if it has one -->
+  <title>Carine Le Charlès | Développeuse web full stack</title>
+  <meta name="description" content="Développeuse freelance basé à Bordeaux, je me tiens à votre disposition pour toute proposition de missions dans le développement web.">
+  <meta name="keywords" content="site internet, développeur, développeuse, web, full stack, freelance, Bordeaux, mission, Ruby On rails, Javascript, html, css">
+
+  <!-- Facebook Open Graph data -->
+  <meta property="og:title" content="Carine Le Charlès | Développeuse web full stack">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/banner-f9b73a10.jpg">
+  <meta property="og:description" content="Développeuse freelance basé à Bordeaux, je me tiens à votre disposition pour toute proposition de missions dans le développement web.">
+  <meta property="og:url" content="https://www.carinelecharles.fr/">
+  <meta property="fb:app_id" content="2162363410668536">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Open Graph data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rinou_lc">
+  <meta name="twitter:title" content="Carine Le Charlès | Développeuse web full stack">
+  <meta name="twitter:description" content="Développeuse freelance basé à Bordeaux, je me tiens à votre disposition pour toute proposition de missions dans le développement web.">
+  <meta name="twitter:creator" content="@rinou_lc">
+  <meta name="twitter:image:src" content="https://www.carinelecharles.fr/images/banner-8b28ba6d.jpg">
+
+  <link rel="canonical" href="https://www.carinelecharles.fr">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|PT+Sans:400,700" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+  <script src="javascripts/application-2eb7662f.js"></script>
+  <link href="stylesheets/application-a0614651.css" rel="stylesheet" />
+  <link href="images/favicon.ico" rel="icon" type="image/ico" />
+</head>
+<body>
+  <script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+
+// SEND EMAIL FROM CONTACT FORM
+const form = document.getElementById('contactForm');
+const formspreeEmail = 'carine.le.charles@gmail.com';
+const success = document.getElementById('success');
+const close = document.getElementById('close');
+// Convert form data to json
+const formDataToJson = formData => {
+  const entries = formData.entries();
+  const dataObj = Array.from(entries).reduce( (data, [key, value]) => {
+    data[key] = value;
+    if (key === "email") {
+      data._replyTo = value;
+    }
+    return data;
+  }, {});
+  return JSON.stringify(dataObj);
+};
+
+//Post request with fetch
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    formData.append('_subject', 'Message from CLC website');
+
+    fetch(`https://formspree.io/${ formspreeEmail }`, {
+      method: 'POST',
+      body: formDataToJson(formData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success === 'email sent') {
+        success.classList.add("expand");
+        form.reset();
+      };
+    });
+  });
+}
+
+if (close) {
+  close.addEventListener('click', () => {
+    success.classList.remove("expand");
+  });
+}
+
+// BANNER TYPED.JS
+const typed = document.getElementById("typed");
+if (typed) {
+  new Typed("#typed", {
+    strings: [
+    "Bonjour !<br><br>Je m'appelle Carine. Je suis développeuse web full stack.<br><br>Faisons connaisance..."
+    ],
+    typeSpeed: 50
+  });
+}
+
+const bannerInfo = document.getElementById("banner-info");
+const navbar = document.getElementById("navbar");
+const logoNavbar = document.getElementById("logo");
+const logoNavbarPhone = document.getElementById("logo-navbar-phone");
+const hamb = document.getElementById("toggle");
+const hambElement = document.querySelectorAll(".overlay-menu-element");
+const overlay = document.getElementById("overlay");
+const body = document.body;
+
+// BANNER INFO DISAPPEARS ON SCROLL
+window.addEventListener("scroll", () => {
+  if (bannerInfo) {
+    if (scrollY > 160) {
+      bannerInfo.classList.remove("display-banner-info");
+      bannerInfo.classList.add("hide-banner-info");
+    } else {
+      bannerInfo.classList.remove("hide-banner-info");
+      bannerInfo.classList.add("display-banner-info");
+    }
+  }
+});
+
+// NAVBAR STYLE CHANGE ON SCROLL
+window.addEventListener("scroll", () => {
+  if (navbar) {
+    if (window.scrollY >= window.innerHeight) {
+      navbar.classList.remove("bg-transparent");
+      navbar.classList.add("navbar-fixed");
+      logoNavbar.src = "images/logo-yellow-dae835dc.png";
+    } else {
+      navbar.classList.remove("navbar-fixed");
+      navbar.classList.add("bg-transparent");
+      logoNavbar.src = "images/logo-grey-771ceda7.png";
+    }
+  }
+});
+
+// DISPLAY LOGO NAVBAR IN PHONE SCREEN
+window.addEventListener("scroll", () => {
+  if (navbar) {
+    if (window.scrollY >= window.innerHeight) {
+      logoNavbarPhone.classList.remove("invisible");
+      logoNavbarPhone.classList.add("visible");
+    } else {
+      logoNavbarPhone.classList.remove("visible");
+      logoNavbarPhone.classList.add("invisible");
+    }
+  }
+});
+
+// OPEN MENU HAMBURGER
+if (hamb) {
+  hamb.addEventListener("click", () => {
+   hamb.classList.toggle('active');
+   overlay.classList.toggle('open');
+   body.classList.toggle('noscroll');
+ });
+}
+
+// CLOSE MENU HAMBURGER
+if (hambElement) {
+  hambElement.forEach(element => {
+    element.addEventListener("click", () => {
+     hamb.classList.remove('active');
+     overlay.classList.remove('open');
+     body.classList.remove('noscroll');
+   });
+  });
+}
+
+</script>
+
+
+
+  <script src="javascripts/typed-f01cefa5.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

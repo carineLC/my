@@ -34,82 +34,21 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
   <script src="javascripts/application-2eb7662f.js"></script>
-  <link href="stylesheets/application-7cea7641.css" rel="stylesheet" />
+  <link href="stylesheets/application-a0614651.css" rel="stylesheet" />
   <link href="images/favicon.ico" rel="icon" type="image/ico" />
 </head>
 <body>
   <script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
-  });
-
-// SEND EMAIL FROM CONTACT FORM
-const form = document.getElementById('contactForm');
-const formspreeEmail = 'carine.le.charles@gmail.com';
-const success = document.getElementById('success');
-const close = document.getElementById('close');
-// Convert form data to json
-const formDataToJson = formData => {
-  const entries = formData.entries();
-  const dataObj = Array.from(entries).reduce( (data, [key, value]) => {
-    data[key] = value;
-    if (key === "email") {
-      data._replyTo = value;
-    }
-    return data;
-  }, {});
-  return JSON.stringify(dataObj);
-};
-
-//Post request with fetch
-if (form) {
-  form.addEventListener('submit', (e) => {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
-
-    const formData = new FormData(form);
-    formData.append('_subject', 'Message from CLC website');
-
-    fetch(`https://formspree.io/${ formspreeEmail }`, {
-      method: 'POST',
-      body: formDataToJson(formData),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success === 'email sent') {
-        success.classList.add("expand");
-        form.reset();
-      };
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
     });
   });
-}
+});
 
-if (close) {
-  close.addEventListener('click', () => {
-    success.classList.remove("expand");
-  });
-}
-
-// BANNER TYPED.JS
-const typed = document.getElementById("typed");
-if (typed) {
-  new Typed("#typed", {
-    strings: [
-    "Bonjour !<br><br>Je m'appelle Carine. Je suis développeuse web full stack.<br><br>Faisons connaisance..."
-    ],
-    typeSpeed: 50
-  });
-}
-
-const bannerInfo = document.getElementById("banner-info");
 const navbar = document.getElementById("navbar");
 const logoNavbar = document.getElementById("logo");
 const logoNavbarPhone = document.getElementById("logo-navbar-phone");
@@ -118,46 +57,19 @@ const hambElement = document.querySelectorAll(".overlay-menu-element");
 const overlay = document.getElementById("overlay");
 const body = document.body;
 
-// BANNER INFO DISAPPEARS ON SCROLL
-window.addEventListener("scroll", () => {
-  if (bannerInfo) {
-    if (scrollY > 160) {
-      bannerInfo.classList.remove("display-banner-info");
-      bannerInfo.classList.add("hide-banner-info");
-    } else {
-      bannerInfo.classList.remove("hide-banner-info");
-      bannerInfo.classList.add("display-banner-info");
-    }
-  }
-});
-
 // NAVBAR STYLE CHANGE ON SCROLL
-window.addEventListener("scroll", () => {
-  if (navbar) {
-    if (window.scrollY >= window.innerHeight) {
-      navbar.classList.remove("bg-transparent");
-      navbar.classList.add("navbar-fixed");
-      logoNavbar.src = "images/logo-yellow-dae835dc.png";
-    } else {
-      navbar.classList.remove("navbar-fixed");
-      navbar.classList.add("bg-transparent");
-      logoNavbar.src = "images/logo-grey-771ceda7.png";
-    }
-  }
-});
+if (navbar) {
+  navbar.classList.remove("bg-transparent");
+  navbar.classList.add("navbar-fixed");
+  logoNavbar.src = "images/logo-yellow-dae835dc.png";
+}
+
 
 // DISPLAY LOGO NAVBAR IN PHONE SCREEN
-window.addEventListener("scroll", () => {
-  if (navbar) {
-    if (window.scrollY >= window.innerHeight) {
-      logoNavbarPhone.classList.remove("invisible");
-      logoNavbarPhone.classList.add("visible");
-    } else {
-      logoNavbarPhone.classList.remove("visible");
-      logoNavbarPhone.classList.add("invisible");
-    }
-  }
-});
+if (navbar) {
+    logoNavbarPhone.classList.remove("invisible");
+    logoNavbarPhone.classList.add("visible");
+}
 
 // OPEN MENU HAMBURGER
 if (hamb) {
@@ -178,7 +90,6 @@ if (hambElement) {
    });
   });
 }
-
 </script>
 
 
