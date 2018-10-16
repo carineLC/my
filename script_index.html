@@ -70,7 +70,7 @@ const formDataToJson = formData => {
 //Post request with fetch
 if (form) {
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     const formData = new FormData(form);
     formData.append('_subject', 'Message from CLC website');
