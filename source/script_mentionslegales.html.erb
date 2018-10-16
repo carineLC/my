@@ -1,0 +1,53 @@
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+
+const navbar = document.getElementById("navbar");
+const logoNavbar = document.getElementById("logo");
+const logoNavbarPhone = document.getElementById("logo-navbar-phone");
+const hamb = document.getElementById("toggle");
+const hambElement = document.querySelectorAll(".overlay-menu-element");
+const overlay = document.getElementById("overlay");
+const body = document.body;
+
+// NAVBAR STYLE CHANGE ON SCROLL
+if (navbar) {
+  navbar.classList.remove("bg-transparent");
+  navbar.classList.add("navbar-fixed");
+  logoNavbar.src = "images/logo-yellow.png";
+}
+
+
+// DISPLAY LOGO NAVBAR IN PHONE SCREEN
+if (navbar) {
+    logoNavbarPhone.classList.remove("invisible");
+    logoNavbarPhone.classList.add("visible");
+}
+
+// OPEN MENU HAMBURGER
+if (hamb) {
+  hamb.addEventListener("click", () => {
+   hamb.classList.toggle('active');
+   overlay.classList.toggle('open');
+   body.classList.toggle('noscroll');
+ });
+}
+
+// CLOSE MENU HAMBURGER
+if (hambElement) {
+  hambElement.forEach(element => {
+    element.addEventListener("click", () => {
+     hamb.classList.remove('active');
+     overlay.classList.remove('open');
+     body.classList.remove('noscroll');
+   });
+  });
+}
+</script>

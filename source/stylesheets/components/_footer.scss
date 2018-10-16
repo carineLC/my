@@ -19,7 +19,7 @@
     line-height: 1.4em;
     border-radius: 5px;
     &:hover {
-      opacity: 0.9;
+      opacity: 0.8;
     }
   }
   .social-icons {
@@ -50,6 +50,13 @@
     margin-top: 40px;
     font-size: .75em;
     font-weight: lighter;
+    a {
+      color: $light-gray;
+      &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+      }
+    }
   }
 }
 
