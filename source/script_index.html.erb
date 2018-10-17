@@ -11,6 +11,7 @@
 
 // SEND EMAIL FROM CONTACT FORM
 const form = document.getElementById('contactForm');
+const formspreeEmail = 'carine.le.charles@gmail.com';
 const success = document.getElementById('success');
 const close = document.getElementById('close');
 // Convert form data to json
@@ -18,9 +19,6 @@ const formDataToJson = formData => {
   const entries = formData.entries();
   const dataObj = Array.from(entries).reduce( (data, [key, value]) => {
     data[key] = value;
-    if (key === "email") {
-      data._replyTo = value;
-    }
     return data;
   }, {});
   return JSON.stringify(dataObj);
@@ -32,22 +30,23 @@ if (form) {
     e.preventDefault();
 
     const formData = new FormData(form);
-    formData.append('_subject', 'Message from CLC website');
 
     fetch(form.action, {
       method: form.method,
-      body: formDataToJson(formData),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: formDataToJson(formData)
     })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success === 'email sent') {
-        success.classList.add("expand");
-        form.reset();
-      };
-    });
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 200) {
+          success.classList.add("expand");
+          form.reset();
+        };
+      })
+      // .catch(error => console.log(err));
   });
 }
 
